@@ -1,0 +1,379 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{margin: 0; padding: 0;}
+ul, li{margin: 0; padding: 0; list-style: none;}
+body{font-family: 'Noto Sans KR', sans-serif; width: 100%;}
+.inner, #inner{width: 1200px; margin: 0 auto;}
+a{text-decoration: none; color: #eee;}
+
+
+#wrap{position: relative; width: 100%;}
+
+.add{width: 100%; height: 80px; background: #000; position: relative; z-index: 30;}
+.add .popup{position: absolute; left: 50%;  top: 0; transform: translateX(-50%);}
+.add span{width: 20px; height: 20px; color: #fff; position: absolute; bottom: 0; right: 0px; background: rgba(255,255,255,0.1); text-align: center; line-height: 20px; cursor: pointer;}
+
+header{width: 100%; height: 91px; border-bottom: 1px solid #555; z-index: 30; position:absolute; top: 0; background:rgba(0,0,0,0.1);}
+header .logo{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+
+header .inner{position: relative}
+header .top.left{position: absolute; left: 0; top: 10px;}
+header .top.right{position: absolute; right: 0; top: 10px;}
+header ul{display: flex;}
+header .top ul li a{margin-right: 20px; color: #aaa; font-size: 12px;}
+header .top.right ul li:last-child a{margin-right:0;}
+
+header .inner .bottom{position: absolute; top: 46px;}
+header .bottom{display: flex;}
+header .bottom.left{z-index: 10;}
+header .bottom.right{position: absolute; right: 0;}
+header .bottom .icon li{margin:8px 8px 0;}
+header .bottom.right .icon li:first-child{margin-top: 1px;}
+
+header .text{width: 100%; height: 30px; position: relative;}
+header .text .Gnb .nt{width: 60px; text-align: center;}
+
+header .bottom.text li.navTop_01{position: absolute; left: 150px;}
+header .bottom.text li.navTop_02{position: absolute; left: 250px;}
+header .bottom.text li.navTop_03{position: absolute; left: 350px;}
+header .bottom.text li.navTop_04{position: absolute; left: 800px;}
+header .bottom.text li.navTop_05{position: absolute; left: 900px;}
+header .bottom.text li.navTop_06{position: absolute; left: 1000px;}
+header .bottom.text a{color: #fff; font-size: 20px; font-weight: 100;}
+header .bottom .text ul:last-child a{margin-right:0;}
+
+
+/* navTop_01 */
+
+
+header .text .Gnb li .sgnb{width:100%; z-index: 1; margin-top: 17px; padding-top: 8px; margin-right: 20px;}
+header .text .Gnb li .sgnb a{font-size: 16px;}
+
+header .bottom.text .nt .sgnb{position: relative; width: 1200px;}
+
+header .bottom.text .nt .sgnb3{width: 500px;}
+header .bottom.text .nt .sgnb2{width: 500px;}
+header .bottom.text .nt .sgnb4{width: 450px;}
+header .bottom.text .nt .sgnb6{width: 280px;}
+
+header .bottom.text li .sgnb ul{width: 1200px; height: 40px; display: none; width: 100%; overflow: hidden;}
+header .bottom.text li:hover .sgnb ul{display: flex;}
+header .bottom.text .nt:hover:after{content: ""; width: 30px; height: 2px; background: #fff; display: block; position: absolute; bottom:7px; left: 14px;}
+header .bottom.text li .sgnb .sgnb_01{position: absolute; left: -137px; width: 400px;}
+header .bottom.text li .sgnb .sgnb_02{position: absolute; left: -142px;}
+header .bottom.text li .sgnb .sgnb_03{position: absolute; left: -87px;}
+header .bottom.text li .sgnb .sgnb_04{position: absolute; left: -170px;}
+header .bottom.text li .sgnb .sgnb_06{position: absolute; left: -130px;}
+
+header .bottom.text li .sgnb ul li a{font-size: 14px; margin-left: 45px; font-weight: 400;}
+
+
+header .headerBG{position: absolute; top: 91px; height: 40px; line-height: 40px; width: 100%; background: rgba(0,0,0,0.4); z-index: -2;
+display: none;
+}
+
+
+/* 박스오피스 */
+
+
+#main{width: 100%; height: 922px; background-image: url(../img/visualBg.jpg); background-size: cover; position: relative;}
+#main::before{content: ""; display: block; position: absolute; top: 0; width: 100%; height: 922px; background:rgba(0,0,0,0.82);}
+
+#main .BoxOffice{position: absolute; top: 70px; left: 50%; transform: translateX(-50%);}
+#main .BoxOffice h2{position: absolute; top: 70px; left: 50%; transform: translateX(-50%); color: #fff; font-size: 14px; margin-top: 0;}
+#main .BoxOffice h2 span::after{content: ""; display: block; width: 60px; height: 1px; background-color: #666; margin-top: 5px; margin-left: 3px;}
+
+#main .BoxOffice .moreBO{position: absolute; top: 80px; right: 0px; color: #aaa; font-size: 15px; display: flex;}
+#main .BoxOffice .moreBO:hover p{text-decoration: underline;}
+#main .BoxOffice .moreBO span{margin-top: 2px;} 
+
+#main .BoxOffice ul{position: absolute; top: 120px; left: 50%; transform: translateX(-50%); display: flex; justify-content: space-evenly;}
+#main .BoxOffice ul li{width: 245px; margin-right: 40px;}
+#main .BoxOffice ul li:last-child{margin-right: 0;}
+
+.movie{position: relative;}
+.movie>div{width: 245px; height: 353px; position: relative; margin-bottom: 10px;}
+.movie>div>p{position: absolute; top: 0; left: 0; padding: 5px 0 0 15px; font-size: 33px; font-weight: 200; color: #fff; background:url(../img/bg-main-movie-rank.png); background-size: cover; width: 100%; height: 150px;}
+.movie>div>p em{text-shadow: 1px 1px 2px #000;}
+
+.movie>div>a p{height: 313px; position: absolute; top: 0; color: #fff; background: rgba(0,0,0,0.8); padding: 20px; overflow: hidden; font-size: 14px; opacity: 0;}
+.movie>div>a p b{position: absolute; top: 270px; display: block; width: 210px; height: 1px; background-color:#777;}
+.movie>div>a p span{position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);}
+.movie>div>a p span{position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);}
+.movie>div>a p span strong{margin-left: 30px; font-size: 30px; color: #56B7BB;}
+.movie>div:hover a p{display: block; opacity: 1; transition: 0.2s;}
+
+.movie a img{width: 245px; height: 353px; border-radius: 5px;}
+
+.movie>.like{display: inline-block; width: 76px; height: 37px; line-height: 37px; color: #fff; border: 1px solid #666; border-radius: 5px; margin-right: 5px; box-sizing: border-box; cursor: pointer; padding-left: 20px;}
+
+.movie .like{position: relative;}
+
+.heart-icon {
+    position: absolute; top: 6px; left: 10px; width: 24px; height: 24px; cursor: pointer; fill :none; stroke: #ccc; transition: fill 0.2s;
+}
+
+.movie .like #like-count{position: absolute; top: -1px; right: 12px;}
+
+.movie>a{display: inline-block; width: 160px; height: 37px; line-height: 37px; text-align: center; color: #fff; background-color: #037B94; border: 1px solid #037B94; border-radius: 5px; box-sizing: border-box; position: absolute; bottom: 15px;}
+
+#main .BoxOffice .movieSearch{position: absolute; top: 580px; left: 50%; transform: translateX(-50%); border:0; width: 100%; height: 76px; line-height: 76px; background: rgba(0,0,0,0.88);}
+#main .BoxOffice .movieSearch input{width: 70%; border:0; border-bottom: 1px solid #aaa; background: 0; padding: 10px 12px; font-size: 14px; color: #fff; position: relative; margin-left: 20px;}
+#main .BoxOffice .movieSearch li:first-child{position:relative;}
+#main .BoxOffice .movieSearch li:first-child img{position: absolute; top: 50%; transform:translateY(-50%); right: 3px; cursor: pointer;}
+
+#main .BoxOffice .movieSearch li{text-align: center; position: relative; width: 275px; display: block;}
+#main .BoxOffice .movieSearch li:after{content: ""; width: 1px; height: 30px; position: absolute; top: 50%; transform: translateY(-50%); right: -20px; background: #666;}
+#main .BoxOffice .movieSearch li:last-child:after{content: ""; width: 0; height: 0;}
+#main .BoxOffice .movieSearch li a{color: #fff; position: relative;}
+#main .BoxOffice .movieSearch li a:hover p{text-decoration: underline;}
+#main .BoxOffice .movieSearch li a p{position: absolute; top: -20px; left: -30px;}
+#main .BoxOffice .movieSearch li a span{margin-left: 10px;}
+
+#main .BoxOffice .mouse{position: absolute; top: 700px; left: 50%; transform: translateX(-50%);}
+
+
+/* 흔들기 애니메이션 */
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(0, -5px); }
+    20% { transform: translate(0, 0); }
+    30% { transform: translate(0, 5px); }
+    40% { transform: translate(0, 0); }
+    50% { transform: translate(0, -5px); }
+    60% { transform: translate(0, 0); }
+    70% { transform: translate(0, 5px); }
+    80% { transform: translate(0, 0); }
+    90% { transform: translate(0, -5px); }
+    100% { transform: translate(0, 0); }
+}
+/* mouse 클래스에 애니메이션 속성 추가 */
+.mouse {
+    animation: shake 3s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+
+section h2{font-size: 30px; font-weight: 500;}
+
+section#event{width: 100%; height: 1150px; margin: 0 auto; position: relative;}
+section#event h2{margin-top: 50px; color: #351F66;}
+section#event .eLeft{float: left; height: 326px; position: relative;}
+section#event .eLeft .eMain{width: 685px; height: 326px;}
+section#event .eLeft .eMain ul li{width: 685px; position: relative; z-index: -3;}
+section#event .eLeft .eMain ul li .maintext{position: absolute; top: 0; left: 0;}
+section#event .eLeft .eMain ul li .mainimg{position: absolute; top: 0; right: 0;}
+section#event .eLeft .eMain ul li .mainimg:after{content:""; width:385px; height: 325px; background-image: url(../img/slideCover.png); position: absolute; top: 0; left: 0;}
+
+.slider{position: relative; width: 100%;}
+
+.box{display: block;}
+
+.active { display: block;}
+
+section#event .eLeft .progress-container{width: 200px; height: 2px; background-color: #ccc; position: relative; top: 280px; left: 0;}
+.progress-bar{width: 0; height: 100%; background-color: #351F66; transition: width 0.3s;}
+
+section#event .eLeft .to-btn{position: absolute; top: 270px; left: 220px;}
+section#event .eLeft .to-btn button{width: 20px; height: 20px; background: none; border: 0; cursor: pointer;}
+
+section#event .eBottom{position: absolute; top: 500px; width: 100%; height: 150px; background: #503396; z-index: -1;}
+
+section#event .eBleft,
+section#event .eBright{box-shadow: 5px 5px 10px rgba(0,0,0,0.3); z-index: 199;}
+section#event .eBleft{float: left; width: 441px; height: 205px; border-radius: 10px; overflow: hidden;}
+section#event .eBleft a img{width: 441px; height: 205px; object-fit: cover;}
+section#event .eBright{float: left; width: 204px; height: 205px; border-radius: 10px; overflow: hidden; margin-left: 20px;}
+section#event .eBright a img{width: 204px; height: 205px; object-fit: cover;}
+
+
+section#event .eRight{float: right; width: 415px; height: 530px; border-radius: 10px; overflow: hidden; position: relative; z-index: 9; top: 0;}
+section#event .eRight span{position: absolute; bottom: 0; right: 0;}
+
+
+/* middleNav */
+
+
+section#event .eventMiddle{width: 100%; height: 510px; position: absolute; top: 640px; background: #503396;}
+
+section#event .eventMiddle .middleNav{width: 100%; height: 130px; display: flex; justify-content: space-between;}
+section#event .eventMiddle .middleNav li{width: 220px; text-align: center; height: 83px; padding: 50px auto;}
+section#event .eventMiddle .inner .middleNav li a{width: 220px; height: 83px; text-align: center; color: #fff; display: block;}
+section#event .eventMiddle .middleNav li a p{margin-top: 15px; font-weight: 300;}
+
+
+section#event .eventMiddle .grandOpen{border-top: 1px solid rgba(255,255,255,0.1); padding-top: 60px; position: relative;}
+section#event .eventMiddle .grandOpen h4{ color: #fff; font-weight: 400; font-size: 22px;}
+section#event .eventMiddle .grandOpen h3{color: #fff; font-size: 40px; font-weight: 500; line-height: 110%; margin-top: 20px; text-shadow: 5px 5px 7px rgba(0,0,0,0.2);}
+
+section#event .eventMiddle .grandOpen div{width: 205px; height: 205px; border-radius: 50%; text-align: center; box-shadow: 5px 5px 7px rgba(0,0,0,0.2);}
+
+section#event .eventMiddle .grandOpen div h3{text-shadow: 1px 1px 20px rgba(0,0,0,1);}
+section#event .eventMiddle .grandOpen div:hover h3{text-shadow: 0px 0px 0px;}
+section#event .eventMiddle .grandOpen div a span{display: block; margin-top: 25px; margin-left: 50%; transform: translateX(-50%); width: 70px; height: 22px; line-height: 22px; color: #fff; font-size: 12px;}
+section#event .eventMiddle .grandOpen div.open1 a span{background: #01738B;}
+section#event .eventMiddle .grandOpen div.open2 a span{background: #503396;}
+section#event .eventMiddle .grandOpen div h3{margin-top: 30px; font-size: 28px;}
+section#event .eventMiddle .grandOpen div h4{margin-top: 15px; font-size: 18px;}
+
+section#event .eventMiddle .grandOpen .open1{position: absolute; top: 60px; right: 45%; background-image: url(../img/bg-theater-new.jpg);}
+section#event .eventMiddle .grandOpen .open2{position: absolute; top: 60px; right: 20%; background-image: url(../img/bg-theater-renewal.jpg);}
+
+section#event .eventMiddle .grandOpen div:focus,
+section#event .eventMiddle .grandOpen div:hover{background: #fff;}
+
+section#event .eventMiddle .grandOpen .open1:focus h3,
+section#event .eventMiddle .grandOpen .open1:hover h3,
+section#event .eventMiddle .grandOpen .open1:focus h4,
+section#event .eventMiddle .grandOpen .open1:hover h4{color: #01738B;}
+
+section#event .eventMiddle .grandOpen .open2:focus h3,
+section#event .eventMiddle .grandOpen .open2:hover h3,
+section#event .eventMiddle .grandOpen .open2:focus h4,
+section#event .eventMiddle .grandOpen .open2:hover h4{color: #503396;}
+
+
+/* 큐레이션 */
+
+
+section#curation{width: 100%; height: 841px; margin: 0 auto; background-color: #252451;}
+section#curation .inner{position: relative;}
+section#curation h2{margin-top: 40px; color: #fff;font-weight: 500; margin-bottom: 30px; font-weight: 500;}
+section#curation .inner .moreCU{position: absolute; top: 50px; right: 0; display: flex;}
+section#curation .moreCU p{color: #fff; font-weight: 100;}
+section#curation .moreCU:hover p{text-decoration: underline}
+section#curation .moreCU span{margin-top: 2px;}
+
+section#curation{display: flex;}
+section#curation .cuLeft{float: left; width: 35%; height: 500px; display: block; position: relative;}
+section#curation .cuLeft p{position: absolute; top: 0; left: 0;}
+section#curation .cuLeft .cuMain{width: 384px; height: 549px; padding: 10px 25px;}
+section#curation .cuLeft .cuMain a img{width: 384px; height: 549px; object-fit: cover; border-radius: 15px;} 
+section#curation .cuLeft span a{width: 185px; height: 43px; line-height: 43px; border: 1px solid #fff; display: inline-block; border-radius: 5px; text-align: center; color: #fff; margin:0 5px 0 25px;}
+section#curation .cuLeft span+span a{margin-left: 2px; border: 0; background: #037B94; border: 1px solid #037B94;}
+section#curation .cuLeft span:hover a{background: #333; border: 1px solid #333;}
+
+
+section#curation .cuRight{float: right; width: 64%; color: #fff;}
+section#curation .cuRight h4{margin-top: 5px; font-size: 20px; font-weight: 300;}
+section#curation .cuRight h3{margin-top: 5px; font-size: 34px; font-weight: 400;}
+section#curation .cuRight>p{margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); font-weight: 200;}
+
+section#curation .cuRight ul{display: flex; border: 0; margin-top: 20px;}
+section#curation .cuRight ul li{margin-left: 20px;}
+section#curation .cuRight ul li a{position: relative;  display: block;}
+section#curation .cuRight ul li a span{position: absolute; top: -5px; left: -5px;}
+section#curation .cuRight ul li a img{border-radius: 5px;}
+section#curation .cuRight ul li p{width: 160px; color: #fff; text-align: center; margin-top: 5px; font-size: 13px; overflow: hidden; text-overflow:ellipsis; white-space: nowrap;}
+
+
+/* 메가박스 안내 */
+
+
+section#information h2{margin-top: 50px; color: #503396;}
+section#information .cinema{width: 1200px; height: 170px; margin: 50px auto; display: flex; justify-content: space-between;}
+section#information .cinema li{width: 160px; height: 159px; border-radius: 10px; background-size: cover; box-shadow: 5px 5px 5px rgba(0,0,0,0.3);}
+section#information .cinema li a{width: 160px; height: 160px; display: block;}
+section#information .cinema li:first-child{background-image: url(../img/bg-main-megainfo-dolby.png);}
+section#information .cinema li:nth-child(2){background-image: url(../img/bg-main-megainfo-private.png);}
+section#information .cinema li:nth-child(3){background-image: url(../img/bg-main-megainfo-boutique.png);}
+section#information .cinema li:nth-child(4){background-image: url(../img/bg-main-megainfo-mx.png);}
+section#information .cinema li:nth-child(5){background-image: url(../img/bg-main-megainfo-comfort.png);}
+section#information .cinema li:nth-child(6){background-image: url(../img/bg-main-megainfo-puppy.jpg);}
+section#information .cinema li:nth-child(7){background-image: url(../img/bg-main-megainfo-kids.png);}
+
+section#information .cinema li:focus,
+section#information .cinema li:hover{background-position-y: 160px;}
+
+section#information .cinema li.pin:focus,
+section#information .cinema li.pin:hover{background-position-y: 159px;}
+
+section#information .cinema li.pin2:focus,
+section#information .cinema li.pin2:hover{background-position-y: 160.5px;}
+
+section#information .notice{width: 100%; height: 54px; line-height: 54px; border-top: 1px solid rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.1);}
+section#information .notice ul{display: flex; justify-content: space-between; }
+section#information .notice ul li{position: relative;}
+section#information .notice ul li a{color: #333;}
+section#information .notice ul li:before{content:""; position: absolute; width: 1px; height: 20px; background: rgba(0,0,0,0.05); left: -20px; top: 18px;}
+section#information .notice ul li:first-child:before{content:""; width: 0; height: 0;}
+section#information .notice ul li:nth-child(1){width: 90px;}
+section#information .notice ul li:nth-child(2){width: 950px; text-align: left; position: relative;}
+section#information .notice ul li:nth-child(2) a:focus,
+section#information .notice ul li:nth-child(2) a:hover{font-weight: bold;}
+
+section#information .notice ul li:nth-child(2) a b{color: #037B94; margin-right:10px;}
+section#information .notice ul li:nth-child(2) span{position: absolute; right: 40px;}
+section#information .notice ul li:nth-child(3){width: 60px; text-align: right;}
+
+section#information .bottomNav{display: flex; justify-content: space-evenly; text-align: center;}
+section#information .bottomNav li{width: 200px; margin: 50px 0}
+section#information .bottomNav li a{color: #333;}
+section#information .bottomNav li a p{margin-top: 10px; color: #333;}
+
+
+/* 하단광고 */
+
+
+.bottomAdd{width: 100%; height: 227px; margin: 0 auto; background: #000;}
+.bottomAdd a{display: block; width: 1200px; height: 100%; margin: 0 auto; position: relative;}
+.bottomAdd a>img{margin: 0 auto; position: absolute; left: 50%; transform: translateX(-50%);}
+.bottomAdd a span{position: absolute; bottom: 0; right: 0;}
+
+
+/* footer */
+
+
+footer{width: 100%; height: 171px; background: #F8F8FA;}
+footer .inner{position: relative;}
+footer ul{display: flex;}
+footer ul li a{color: #333;}
+footer ul li a.active{font-weight: 900;}
+
+footer .fTop{font-size: 14px; padding: 30px 0;}
+footer .fTop li{margin-right: 20px;}
+
+footer p{position: absolute; top: 75px; left: 170px; font-size: 13px;}
+
+footer .inner>span{position: absolute; right: 0px; top: 25px; width: 91px; height: 27px; line-height: 27px; border-radius: 27px; border: 1px solid rgba(0,0,0,0.1); display: block; cursor: pointer; font-size: 13px;}
+footer .inner>span>img{padding-left: 10px; padding-top: 5px;}
+
+footer .sns{display: flex; position: absolute; right: 0; bottom: 20px;}
+footer .sns li{margin-left: 10px;}
+
+
+/* 극장찾기 팝업 */
+
+
+.FFind{width: 100%; height: 670px; background: #333; position: absolute; bottom:171px;
+display: none;
+}
+.FFind .inner{position: relative;}
+.FFind .inner h2{color: #fff; padding: 30px 0 25px; width: 100%; font-weight: 500;}
+.FFind .inner p{position: absolute; top: 35px; right: 0; cursor: pointer;}
+
+.FFind .inner div{width: 1100px; height: 540px; border:1px solid rgba(255,255,255,0.1); overflow: hidden;}
+.FFind .inner div b{margin-left: 30px; margin-top: 10px; width: 17%; float: left; color: #fff; font-weight: 500;}
+.FFind .inner div b:first-child{margin-top: 30px;}
+.FFind .inner div ul{margin-top:10px; float: left; width: 74%; margin-right: 10px;}
+.FFind .inner div ul.first{margin-top: 30px;}
+
+.FFind .inner div ul li{float: left; font-size: 12px; margin:0 28px 10px 0;}
+.FFind .inner div ul li a{color: rgba(255,255,255,0.7); font-weight: 300;}
+.FFind .inner div ul li a:hover{font-weight: 700;}
+
+
+/* 팝업광고 */
+
+
+.PopupAdd{position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 540px; height: 435px; background-color: #fff; z-index: 9999999; border-radius: 5px; border: 1px solid #ddd;}
+.PopupAdd .popupSlide{position: relative; margin: 30px;}
+.PopupAdd .popupSlide .slider{width: 480px; height: 375px; border-radius: 5px; overflow: hidden;}
+.PopupAdd .slider .slidelist{position: absolute; top: 0; left: 0; display: flex;  width: 480px; height: 375px;}
+.PopupAdd .slider .slidelist .slide{display: block;}
+.PopupAdd .slider .slidelist .slide a img{width: 480px; height: 375px;}
+
+
+.PopupAdd .popupClose{position: absolute; top: -15px; right: -15px; width: 40px; height: 40px; line-height: 40px; font-size: 22px; color: #fff; background-color: #666; border-radius: 50%; text-align: center; cursor: pointer;}
+
+
